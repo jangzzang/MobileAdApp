@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="앙 메인띠"
+        android:text="앙 메인띠 앙 깃허브 실험띠"
         android:textSize="50dp"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
