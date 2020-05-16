@@ -2,14 +2,18 @@ package com.example.mobileadapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.hitomi.cmlibrary.CircleMenu;
+
 public class MainActivity extends AppCompatActivity {
     private double pressedTime= 0;
     private Button button_about_us;
+
     @Override
     public void onBackPressed() {
         if(pressedTime ==0){
@@ -35,23 +39,11 @@ public class MainActivity extends AppCompatActivity {
         button_about_us.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getApplication(),AboutUsActivity.class);
+                startActivity(intent);
             }
         });
 
     }
 }
 
-
-/*
-
-
-        @Override
-        public void onBackPressed() {
-
-            super.onBackPressed();
-        }
-
-
-
- */

@@ -4,12 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.mobileadapp.ViewPager.ViewPagerAdapter;
 
 public class ViewPagerStartActivity extends AppCompatActivity {
     private FragmentPagerAdapter fragmentPagerAdapter;
