@@ -19,6 +19,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         switch(position){
             case 0:
                 return FragFirst.newInstance();
+
             case 1:
                 return FragSecond.newInstance();
             case 2:
