@@ -26,14 +26,14 @@
         />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_contact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginLeft="64dp"
         android:layout_marginTop="240dp"
         android:background="@drawable/main_custom_button"
-        android:text="Button"
+        android:text="CONTACT"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

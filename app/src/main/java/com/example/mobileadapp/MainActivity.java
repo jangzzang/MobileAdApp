@@ -8,12 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.hitomi.cmlibrary.CircleMenu;
-
 public class MainActivity extends AppCompatActivity {
     private double pressedTime= 0;
     private Button button_about_us;
-
+    private Button button_contact;
     @Override
     public void onBackPressed() {
         if(pressedTime ==0){
@@ -39,7 +37,16 @@ public class MainActivity extends AppCompatActivity {
         button_about_us.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplication(),AboutUsActivity.class);
+                Intent intent = new Intent(getApplication(), AboutUsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        button_contact = findViewById(R.id.button_contact);
+        button_contact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplication(),ContactActivity.class);
                 startActivity(intent);
             }
         });
