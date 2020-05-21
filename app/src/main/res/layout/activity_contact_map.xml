@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_map"
+    tools:context=".MainActivity" >
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <Button
+        android:id="@+id/btn_draw_Right"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="650dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/engineeringlogo" />
+
+    <Button
+        android:id="@+id/btn_Left"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="650dp"
+        android:layout_marginRight="300dp"
+        android:background="@drawable/engineeringlogo" />
+
+</FrameLayout>

@@ -3,6 +3,7 @@ package com.example.mobileadapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,9 @@ public class MainActivity extends AppCompatActivity {
     private double pressedTime= 0;
     private Button button_about_us;
     private Button button_contact;
+    private Button button_sme;
+    private Button button_cafe;
+    private Button button_elect;
     @Override
     public void onBackPressed() {
         if(pressedTime ==0){
@@ -50,6 +54,28 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        button_sme = findViewById(R.id.button_sme_homepage);
+        button_sme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://smobile.knu.ac.kr/"));
+                intent.setPackage("com.android.chrome");
+                startActivity(intent);
+            }
+        });
+
+        button_cafe = findViewById(R.id.button_cafe);
+        button_cafe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.naver.com"));
+                intent.setPackage("com.android.chrome");
+                startActivity(intent);
+            }
+        });
+
+        button_elect = findViewById(R.id.button_elec_hompage);
 
     }
 }
