@@ -14,21 +14,21 @@
         android:name="com.google.android.gms.maps.SupportMapFragment" />
 
     <Button
-        android:id="@+id/btn_draw_Right"
+        android:id="@+id/btn_map_right"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_gravity="right|top"
         android:layout_marginTop="650dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/engineeringlogo" />
+        android:text="제 위치는?" />
 
     <Button
-        android:id="@+id/btn_Left"
+        android:id="@+id/btn_map_left"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_gravity="right|top"
         android:layout_marginTop="650dp"
         android:layout_marginRight="300dp"
-        android:background="@drawable/engineeringlogo" />
+        android:text="과 사무실의 위치는?" />
 
 </FrameLayout>

@@ -1,14 +1,11 @@
 package com.example.mobileadapp;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
-import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
@@ -16,10 +13,10 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -37,6 +34,8 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.io.IOException;
@@ -47,7 +46,7 @@ public class ContactMapActivity extends AppCompatActivity implements OnMapReadyC
 
 
     private GoogleMap mMap;
-    private Marker currentMarker = null;
+    private Marker mobileMarker = null;
     private static final String TAG = "googlemap_example";
     private static final int GPS_ENABLE_REQUEST_CODE = 2001;
     private static final int UPDATE_INTERVAL_MS = 1000;  // 1초
@@ -61,31 +60,66 @@ public class ContactMapActivity extends AppCompatActivity implements OnMapReadyC
 
     Location mCurrentLocation;
     LatLng currentPosition;
-
+    LatLng DEFAULT_LOCATION;
     private FusedLocationProviderClient mFusedLocationClient;
     private LocationRequest locationRequest;
     private Location location;
     private View mLayout;  // Snackbar 사용하기 위해서는 View가 필요합니다.
-
+    private Button button_left;
+    private Button button_right;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_map);
 
+
+        button_left = (Button)findViewById(R.id.btn_map_left);
+        button_left.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(DEFAULT_LOCATION, 15);
+                mMap.moveCamera(cameraUpdate);
+            }
+        });
+
+        button_right = (Button)findViewById(R.id.btn_map_right);        
+        button_right.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!checkLocationServicesStatus()) {
+                    Toast.makeText(ContactMapActivity.this, "위치 활성화 해주세요!", Toast.LENGTH_SHORT).show();
+                }else{
+                    Task<Location> locationTask = mFusedLocationClient.getLastLocation();
+                    locationTask.addOnCompleteListener( new OnCompleteListener<Location>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Location> task) {
+                            if(task.isSuccessful()){
+                                mCurrentLocation = task.getResult();
+                                if(mCurrentLocation == null){
+                                    Toast.makeText(ContactMapActivity.this, "위치를 얻는데 오류가 발생했습니다 ㅠㅠ\n 조금만 기다려 주세요!", Toast.LENGTH_SHORT).show();
+
+                                }else{
+                                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
+                                            new LatLng(mCurrentLocation.getLatitude(),
+                                                    mCurrentLocation.getLongitude()),15));
+                                }
+
+                            }else{
+                                Toast.makeText(ContactMapActivity.this, "위치를 얻는데 오류가 발생했습니다 ㅠㅠ", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+
+                }
+
+            }
+        });
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
                 WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         mLayout = findViewById(R.id.layout_map);
 
-        locationRequest = new LocationRequest()
-                .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
-                .setInterval(UPDATE_INTERVAL_MS)
-                .setFastestInterval(FASTEST_UPDATE_INTERVAL_MS);
-
-
-        LocationSettingsRequest.Builder builder =new LocationSettingsRequest.Builder();
-        builder.addLocationRequest(locationRequest);
 
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
@@ -159,14 +193,11 @@ public class ContactMapActivity extends AppCompatActivity implements OnMapReadyC
         }
 
         mMap.getUiSettings().setMyLocationButtonEnabled(true);
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
-        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-            @Override
-            public void onMapClick(LatLng latLng) {
 
-                Log.d( TAG, "onMapClick :");
-            }
-        });
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
+
+
+
     }
 
 
@@ -174,12 +205,12 @@ public class ContactMapActivity extends AppCompatActivity implements OnMapReadyC
     public void setDefaultLocation(){
 
         //디폴트 위치
-        LatLng DEFAULT_LOCATION  =new LatLng(35.88725,128.61142);
+        DEFAULT_LOCATION  =new LatLng(35.88725,128.61142);
         String markerTitle = "모바일 공학과 사무실 위치";
-        String markerSnippet = "앙";
+        String markerSnippet = "과사 입니다!";
 
 
-        if (currentMarker != null) currentMarker.remove();
+        if (mobileMarker != null) mobileMarker.remove();
 
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(DEFAULT_LOCATION);
@@ -187,7 +218,7 @@ public class ContactMapActivity extends AppCompatActivity implements OnMapReadyC
         markerOptions.snippet(markerSnippet);
         markerOptions.draggable(true);
         markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
-        currentMarker = mMap.addMarker(markerOptions);
+        mobileMarker = mMap.addMarker(markerOptions);
 
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(DEFAULT_LOCATION, 15);
         mMap.moveCamera(cameraUpdate);
@@ -381,7 +412,7 @@ public class ContactMapActivity extends AppCompatActivity implements OnMapReadyC
     public void setCurrentLocation(Location location, String markerTitle, String markerSnippet) {
 
 
-        if (currentMarker != null) currentMarker.remove();
+        if (mobileMarker != null) mobileMarker.remove();
 
         LatLng currentLatLng = new LatLng(location.getLatitude(), location.getLongitude());
 
@@ -392,7 +423,7 @@ public class ContactMapActivity extends AppCompatActivity implements OnMapReadyC
         markerOptions.draggable(true);
 
 
-        currentMarker = mMap.addMarker(markerOptions);
+        mobileMarker = mMap.addMarker(markerOptions);
 
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLng(currentLatLng);
         mMap.moveCamera(cameraUpdate);
