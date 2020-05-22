@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         button_about_us.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplication(), AboutUsActivity.class);
+                Intent intent = new Intent(getApplication(), YoutubeActivity.class);
                 startActivity(intent);
             }
         });
