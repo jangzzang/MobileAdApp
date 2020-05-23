@@ -9,20 +9,19 @@
     android:background="#eeee"
 
     >
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/view_about_us"
-        android:layout_width="407dp"
-        android:layout_height="593dp"
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="409dp"
+        android:layout_height="599dp"
         app:layout_constraintBottom_toTopOf="@+id/circle_menu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
 
     </FrameLayout>
+
     <com.hitomi.cmlibrary.CircleMenu
         android:id="@+id/circle_menu"
         android:layout_width="match_parent"
@@ -30,5 +29,15 @@
         android:layout_marginTop="600dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_to_youtube"
+        android:layout_width="96dp"
+        android:layout_height="36dp"
+        android:text="영상보러가기"
+        android:textAlignment="center"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

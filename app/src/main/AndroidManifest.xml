@@ -13,14 +13,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".YoutubeActivity"></activity>
+        <activity android:name=".SelectActivity"></activity>
+        <activity android:name=".YoutubeActivity" />
         <activity android:name=".ContactMapActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAXUCGZHT3zZqelfWWt9mDI9uonWBUNzPk" />
 
-        <activity android:name=".ContactActivity"></activity>
+        <activity android:name=".ContactActivity" />
         <activity android:name=".AboutUsActivity" />
         <activity android:name=".ViewPagerStartActivity">
             <intent-filter>

@@ -88,7 +88,7 @@ public class ContactMapActivity extends AppCompatActivity implements OnMapReadyC
             @Override
             public void onClick(View v) {
                 if(!checkLocationServicesStatus()) {
-                    Toast.makeText(ContactMapActivity.this, "위치 활성화 해주세요!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ContactMapActivity.this, "위치 활성화 후 다시 들어와주시겠어요?ㅠ_ㅠ", Toast.LENGTH_SHORT).show();
                 }else{
                     Task<Location> locationTask = mFusedLocationClient.getLastLocation();
                     locationTask.addOnCompleteListener( new OnCompleteListener<Location>() {
