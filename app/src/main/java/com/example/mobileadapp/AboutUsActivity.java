@@ -22,6 +22,7 @@ public class AboutUsActivity extends AppCompatActivity {
    private FragmentManager fm;
    private FragmentTransaction tran;
    private  FragMain fragment1;
+   private  FragBenefit fragment2;
    private TextView  tv_to_youtube;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +38,8 @@ public class AboutUsActivity extends AppCompatActivity {
         });
 
         fragment1 = new FragMain();
-        setFrag(0);
+        fragment2 = new FragBenefit();
+        //setFrag(0);
 
         CircleMenu circleMenu = (CircleMenu)findViewById(R.id.circle_menu);
         circleMenu.setMainMenu(Color.parseColor("#CDCDCD"),R.drawable.ic_add_circle_outline_black_24dp,R.drawable.ic_add_circle_outline_black_24dp)
@@ -49,8 +51,10 @@ public class AboutUsActivity extends AppCompatActivity {
                     public void onMenuSelected(int index) {
                         Toast.makeText(AboutUsActivity.this, arrayName[index]+"선택", Toast.LENGTH_SHORT).show();
                         switch(index){
-                            case 0 : break;
-                            case 1 : break;
+                            case 0 :
+                               setFrag(0); break;
+                            case 1 :
+                                setFrag(1); break;
                             case 2:  break;
                         }
                     }
@@ -64,6 +68,10 @@ public class AboutUsActivity extends AppCompatActivity {
         switch(n){
             case 0:
                 tran.replace(R.id.main_frame,fragment1);
+                tran.commit();
+                break;
+            case 1:
+                tran.replace(R.id.main_frame,fragment2);
                 tran.commit();
                 break;
         }
