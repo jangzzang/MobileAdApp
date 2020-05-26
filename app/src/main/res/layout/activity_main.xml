@@ -12,11 +12,11 @@
         android:id="@+id/button_curriculum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="72dp"
         android:background="@drawable/main_custom_button"
         android:text="CURRICULUM"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.344"
+        app:layout_constraintHorizontal_bias="0.218"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_contact" />
 
@@ -32,34 +32,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_contact" />
 
+
     <Button
         android:id="@+id/button_about_us"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="196dp"
         android:layout_marginLeft="196dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="127dp"
         android:layout_marginRight="127dp"
         android:background="@drawable/main_custom_button"
         android:text="About Us"
+        app:layout_constraintBottom_toTopOf="@+id/button_admission_guide"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
 
     <Button
         android:id="@+id/button_contact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="180dp"
         android:background="@drawable/main_custom_button"
         android:text="CONTACT"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <Button
         android:id="@+id/button_admission_guide"
@@ -70,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.807"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_contact" />
+        tools:layout_editor_absoluteY="280dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
