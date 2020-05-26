@@ -5,63 +5,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#eeee"
+    android:background="#EDEDED"
     >
 
-    <Button
-        android:id="@+id/button_curriculum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:background="@drawable/main_custom_button"
-        android:text="CURRICULUM"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.218"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_contact" />
 
     <Button
         android:id="@+id/button_faq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="172dp"
+        android:layout_marginBottom="92dp"
         android:background="@drawable/main_custom_button"
         android:text="FAQ"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_contact" />
-
-
-    <Button
-        android:id="@+id/button_about_us"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="196dp"
-        android:layout_marginLeft="196dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="127dp"
-        android:layout_marginRight="127dp"
-        android:background="@drawable/main_custom_button"
-        android:text="About Us"
-        app:layout_constraintBottom_toTopOf="@+id/button_admission_guide"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button_contact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="180dp"
         android:background="@drawable/main_custom_button"
         android:text="CONTACT"
+        app:layout_constraintBottom_toTopOf="@+id/button_faq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_admission_guide"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/button_about_us"
+        android:layout_width="95dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/main_custom_button"
+        android:text="About Us"
+        android:textColor="#D10000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_curriculum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_custom_button"
+        android:text="CURRICULUM"
+        app:layout_constraintBottom_toTopOf="@+id/button_admission_guide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_about_us"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/button_admission_guide"
@@ -69,12 +66,15 @@
         android:layout_height="wrap_content"
         android:background="@drawable/main_custom_button"
         android:text="ADMISSION\n GUIDE"
+        app:layout_constraintBottom_toTopOf="@+id/button_faq"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_contact" />
+        app:layout_constraintTop_toBottomOf="@+id/button_about_us"
+        app:layout_constraintVertical_bias="0.5" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:orientation="vertical"
@@ -82,33 +82,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/button_sme_homepage"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/main_bottom_custom_button" />
+            <Button
+                android:id="@+id/button_sme_homepage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/main_bottom_custom_button" />
 
 
-        <Button
-            android:id="@+id/button_cafe"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/main_bottom_custom_button" />
+            <Button
+                android:id="@+id/button_cafe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/main_bottom_custom_button" />
 
 
-        <Button
-            android:id="@+id/button_elec_hompage"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/main_bottom_custom_button" />
+            <Button
+                android:id="@+id/button_elec_hompage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/main_bottom_custom_button" />
         </LinearLayout>
 
         <ImageView
