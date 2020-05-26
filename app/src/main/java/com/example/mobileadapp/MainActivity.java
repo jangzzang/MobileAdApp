@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Button button_elect;
     private Button button_admission_guide;
     private Button button_curri;
+    private Button button_faq;
     @Override
     public void onBackPressed() {
         if(pressedTime ==0){
@@ -95,6 +96,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplication(), CurriculumActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        button_faq = (Button)findViewById(R.id.button_faq);
+        button_faq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplication(), FaqActivity.class);
                 startActivity(intent);
             }
         });
