@@ -8,37 +8,59 @@
     tools:context=".ContactActivity">
 
     <TextView
+        android:id="@+id/textView5"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:text="Contact"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/iv_contact_back"
+        android:layout_width="47dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/textView"
         android:layout_width="347dp"
         android:layout_height="63dp"
         android:layout_marginStart="176dp"
         android:layout_marginLeft="176dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="216dp"
         android:layout_marginEnd="176dp"
         android:layout_marginRight="176dp"
-        android:background="#eeee"
-        android:text="학과 사무실 연락처"
         android:gravity="center"
+        android:text="학과 사무실 연락처"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="30dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_googleMap"
-        android:layout_width="136dp"
-        android:layout_height="67dp"
+        android:layout_width="wrap_content"
+        android:layout_height="69dp"
         android:layout_marginStart="153dp"
         android:layout_marginLeft="153dp"
         android:layout_marginEnd="154dp"
         android:layout_marginRight="154dp"
         android:text="모바일 찾아오시는 길"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.438"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -53,6 +75,7 @@
         android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.641"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -88,11 +111,10 @@
         android:layout_marginLeft="113dp"
         android:layout_marginEnd="114dp"
         android:layout_marginRight="114dp"
-        android:layout_marginBottom="200dp"
         android:gravity="center"
         android:text="입시 일정 및 홍보관련 행사 안내\n카카오톡:jangzzang7\nshut_malfoy@naver.com"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/btn_googleMap"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />

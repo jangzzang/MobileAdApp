@@ -7,11 +7,13 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ContactActivity extends AppCompatActivity {
     private Button btn_to_googleMap;
     private TextView btn_call;
+    private ImageView iv_contact_back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +37,13 @@ public class ContactActivity extends AppCompatActivity {
             }
         });
 
+        iv_contact_back = (ImageView)findViewById(R.id.iv_contact_back);
+        iv_contact_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 }

@@ -1,3 +1,5 @@
+
+
 package com.example.mobileadapp;
 
 import android.content.Intent;
@@ -11,9 +13,11 @@ import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
 public class YoutubeActivity extends YouTubeBaseActivity {
-    YouTubePlayerView youTubePlayerView;
-    Button btn;
-    YouTubePlayer.OnInitializedListener listener;
+
+
+    private YouTubePlayerView youTubePlayerView;
+    private Button btn;
+    private  YouTubePlayer.OnInitializedListener listener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

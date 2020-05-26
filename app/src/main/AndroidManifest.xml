@@ -13,7 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SelectActivity"></activity>
+        <activity android:name=".CurriculumActivity"></activity>
+        <activity android:name=".Admission.AdmissionSuSiActivity" />
+        <activity android:name=".Admission.AdmissionJungSiActivity" />
+        <activity android:name=".Admission.AdmissionGuideActivity" />
+        <activity android:name=".SelectActivity" />
         <activity android:name=".YoutubeActivity" />
         <activity android:name=".ContactMapActivity" />
 
@@ -23,7 +27,7 @@
 
         <activity android:name=".ContactActivity" />
         <activity android:name=".AboutUsActivity" />
-        <activity android:name=".ViewPagerStartActivity">
+        <activity android:name=".ViewPager.ViewPagerStartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

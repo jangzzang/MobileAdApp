@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.mobileadapp.Admission.AdmissionGuideActivity;
+
 public class MainActivity extends AppCompatActivity {
     private double pressedTime= 0;
     private Button button_about_us;
@@ -16,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private Button button_sme;
     private Button button_cafe;
     private Button button_elect;
+    private Button button_admission_guide;
+    private Button button_curri;
     @Override
     public void onBackPressed() {
         if(pressedTime ==0){
@@ -36,6 +40,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        button_admission_guide = (Button)findViewById(R.id.button_admission_guide);
+        button_admission_guide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplication(), AdmissionGuideActivity.class);
+                startActivity(intent);
+            }
+        });
 
         button_about_us = findViewById(R.id.button_about_us);
         button_about_us.setOnClickListener(new View.OnClickListener() {
@@ -76,6 +89,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
         button_elect = findViewById(R.id.button_elec_hompage);
+
+        button_curri = (Button)findViewById(R.id.button_curriculum);
+        button_curri.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplication(), CurriculumActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

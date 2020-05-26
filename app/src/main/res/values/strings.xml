@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">MobileAdApp</string>
+    <string name="admission_guide"> \n\n\n\n수시 모집요강\n\n 정시 모집요강\n\n </string>
+    <string name="jung_si">
+        \n\n\n
+        모집인원 10명\n\n
+
+        전형유형: \'가\'군\n
+        전형 요소별 배점: 수능 환산점수 800점
+        (합계 800점)
+        \n\n\n\n
+        *수능최저 기준\n 수학 가형, 과학탐구 1과목 등급 합 3 이내
+
+    </string>
+    <string name="su_si">
+        \n\n\n
+        모집인원 20명\n\n
+
+        전형유형: AAT 전형 , 모바일 과학인재전형\n
+        AAT : 5명\n
+        모바일 과학인재 : 15명\n\n\n
+        전형 요소별 배점\n
+        AAT전형\n 학생부 100점 + AAT 400점\n\n
+        모바일 과학인재전형\n서류250점 + 면접 250점\n\n\n
+
+        *수능최저 기준\n 수학 가형, 과학탐구 1과목 등급 합 3 이내
+
+
+
+    </string>
 </resources>

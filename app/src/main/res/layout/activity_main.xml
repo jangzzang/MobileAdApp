@@ -9,6 +9,18 @@
     >
 
     <Button
+        android:id="@+id/button_curriculum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/main_custom_button"
+        android:text="CURRICULUM"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.344"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_contact" />
+
+    <Button
         android:id="@+id/button_about_us"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,6 +47,18 @@
         android:text="CONTACT"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/button_admission_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_custom_button"
+        android:text="ADMISSION\n GUIDE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_contact" />
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package com.example.mobileadapp;
+package com.example.mobileadapp.ViewPager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.mobileadapp.MainActivity;
+import com.example.mobileadapp.R;
 import com.example.mobileadapp.ViewPager.ViewPagerAdapter;
 
 public class ViewPagerStartActivity extends AppCompatActivity {
@@ -24,7 +26,7 @@ public class ViewPagerStartActivity extends AppCompatActivity {
 
 
     public void onClick(View v){
-        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
     }
 
