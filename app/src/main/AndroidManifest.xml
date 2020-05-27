@@ -13,21 +13,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FaqActivity"></activity>
-        <activity android:name=".FirstGradeActivity" />
-        <activity android:name=".CurriculumActivity" />
+        <activity android:name=".Curriculum.FourthGradeActivity"></activity>
+        <activity android:name=".Curriculum.ThirdGradeActivity" />
+        <activity android:name=".Curriculum.SecondGradeActivity" />
+        <activity android:name=".FaqActivity" />
+        <activity android:name=".Curriculum.FirstGradeActivity" />
+        <activity android:name=".Curriculum.CurriculumActivity" />
         <activity android:name=".Admission.AdmissionSuSiActivity" />
         <activity android:name=".Admission.AdmissionJungSiActivity" />
         <activity android:name=".Admission.AdmissionGuideActivity" />
-        <activity android:name=".SelectActivity" />
         <activity android:name=".YoutubeActivity" />
-        <activity android:name=".ContactMapActivity" />
+        <activity android:name=".Contact.ContactMapActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAXUCGZHT3zZqelfWWt9mDI9uonWBUNzPk" />
 
-        <activity android:name=".ContactActivity" />
+        <activity android:name=".Contact.ContactActivity" />
         <activity android:name=".AboutUsActivity" />
         <activity android:name=".ViewPager.ViewPagerStartActivity">
             <intent-filter>

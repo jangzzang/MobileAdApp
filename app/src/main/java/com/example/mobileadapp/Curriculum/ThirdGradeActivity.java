@@ -1,14 +1,16 @@
-package com.example.mobileadapp;
+package com.example.mobileadapp.Curriculum;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class FirstGradeActivity extends AppCompatActivity {
+import com.example.mobileadapp.R;
+
+public class ThirdGradeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first_grade);
+        setContentView(R.layout.activity_third_grade);
     }
 }

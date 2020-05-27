@@ -37,7 +37,7 @@
 
     <FrameLayout
         android:id="@+id/main_frame"
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="599dp"
         app:layout_constraintBottom_toTopOf="@+id/circle_menu"
         app:layout_constraintEnd_toEndOf="parent"

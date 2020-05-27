@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#eeee"
-    tools:context=".Curriculum.FirstGradeActivity">
+    tools:context=".Curriculum.SecondGradeActivity">
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="300dp"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:background="#ffff"
         android:text="모바일 세미나"
@@ -21,7 +21,7 @@
 
     <TextView
         android:id="@+id/tv_3"
-        android:layout_width="300dp"
+        android:layout_width="260dp"
         android:layout_height="20dp"
         android:layout_marginTop="30dp"
         android:background="#ffff"
@@ -34,10 +34,10 @@
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="300dp"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:background="#ffff"
-        android:text="논리와 비판적 사고\n한국사\n자연과학의 이해"
+        android:text="생활속의 통계"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -46,7 +46,7 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="300dp"
+        android:layout_width="260dp"
         android:layout_height="20dp"
         android:layout_marginTop="24dp"
         android:background="#ffff"
@@ -59,10 +59,10 @@
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="300dp"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:background="#ffff"
-        android:text="회로공학\n공학수학"
+        android:text="확률 및 통계\n디지털회로 공학"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -71,7 +71,7 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="300dp"
+        android:layout_width="260dp"
         android:layout_height="20dp"
         android:layout_marginTop="30dp"
         android:background="#ffff"
@@ -84,7 +84,7 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="300dp"
+        android:layout_width="260dp"
         android:layout_height="20dp"
         android:layout_marginTop="150dp"
         android:background="#ffff"
@@ -99,9 +99,9 @@
         android:id="@+id/textView5"
         android:layout_width="260dp"
         android:layout_height="40dp"
-        android:background="#eeee"
         android:layout_marginTop="36dp"
-        android:text="1학년 "
+        android:background="#eeee"
+        android:text="2학년 "
         android:textAlignment="center"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -122,10 +122,10 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="300dp"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:background="#ffff"
-        android:text="C프로그래밍과 실습\n자료구조\n자바프로그래밍\n컴퓨터학 개론\n이산수학"
+        android:text="고급프로그래밍\n알고리즘\n소프트웨어 공학\n모바일 앱 프로그래밍\nSW역량강화\n머신러닝 응용\n고급 SW역량강화"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

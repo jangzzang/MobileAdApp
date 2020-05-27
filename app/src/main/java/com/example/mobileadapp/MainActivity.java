@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.mobileadapp.Admission.AdmissionGuideActivity;
+import com.example.mobileadapp.Contact.ContactActivity;
+import com.example.mobileadapp.Curriculum.CurriculumActivity;
 
 public class MainActivity extends AppCompatActivity {
     private double pressedTime= 0;
@@ -64,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         button_contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplication(),ContactActivity.class);
+                Intent intent = new Intent(getApplication(), ContactActivity.class);
                 startActivity(intent);
             }
         });

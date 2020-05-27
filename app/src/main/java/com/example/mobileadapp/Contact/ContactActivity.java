@@ -1,4 +1,4 @@
-package com.example.mobileadapp;
+package com.example.mobileadapp.Contact;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.mobileadapp.R;
 
 public class ContactActivity extends AppCompatActivity {
     private Button btn_to_googleMap;
@@ -23,7 +25,7 @@ public class ContactActivity extends AppCompatActivity {
         btn_to_googleMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),ContactMapActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ContactMapActivity.class);
                 startActivity(intent);
             }
         });
